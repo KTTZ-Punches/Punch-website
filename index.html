@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kttz - Fresh Punch & Juices</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fdf3e7;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #d64541;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .construction-message {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1rem;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        .menu-section {
+            display: none;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: scroll;
+            width: 90%;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .menu-table th, .menu-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-table th {
+            background-color: #f39c12;
+            color: white;
+        }
+        .menu-table tr:hover {
+            background-color: #f7dc6f;
+        }
+        .visible {
+            display: block;
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            color: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="construction-message">Website is under construction</div>
+
+    <h1>Welcome to Kttz!</h1>
+    <p>Fresh Punch & Juices - Taste the Difference</p>
+
+    <div class="button-container">
+        <button class="button" onclick="showMenu('juices')">View Juices</button>
+        <button class="button" onclick="showMenu('punches')">View Punches</button>
+        <button class="button" onclick="showMenu('funches')">Order Now</button>
+    </div>
+
+    <!-- Juices Section -->
+    <div id="juices" class="menu-section">
+        <h2>Juices</h2>
+        <table class="menu-table">
+            <tr><th>Juice</th><th>Medium</th><th>Large</th></tr>
+            <tr><td>Apple</td><td>$30</td><td>$40</td></tr>
+            <tr><td>Apricot</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Avocado</td><td>$35</td><td>$40</td></tr>
+            <tr><td>Pommecythere</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Blueberry</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Blackberry</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Cherry</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Coconut</td><td>$30</td><td>$40</td></tr>
+            <tr><td>Dragon Fruit</td><td>$60</td><td>$75</td></tr>
+            <tr><td>Grape</td><td>$30</td><td>$40</td></tr>
+            <tr><td>Guava</td><td>$30</td><td>$40</td></tr>
+            <tr><td>Tamarind</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Lime</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Plum</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Kiwi</td><td>$35</td><td>$45</td></tr>
+            <tr><td>Mango</td><td>$30</td><td>$40</td></tr>
+        </table>
+    </div>
+
+    <!-- Punches Section -->
+    <div id="punches" class="menu-section">
+        <h2>Punches</h2>
+        <table class="menu-table">
+            <tr><th>Punch</th><th>Medium</th><th>Large</th></tr>
+            <tr><td>Peanut</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Coconut</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Seamoss</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Linseed</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Channa</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Pawpaw</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Soursop</td><td>$40</td><td>$45</td></tr>
+            <tr><td>Beetroot</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Carrot</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Pumpkin</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Guava</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Ochro</td><td>$35</td><td>$40</td></tr>
+            <tr><td>Cassava</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Sweet Potato</td><td>$30</td><td>$35</td></tr>
+            <tr><td>Strawberry</td><td>$40</td><td>$45</td></tr>
+            <tr><td>Pineapple</td><td>$35</td><td>$40</td></tr>
+            <tr><td>Bomb (1 Size)</td><td>$50</td><td>$60</td></tr>
+        </table>
+    </div>
+
+    <!-- Funches Section (Updated) -->
+    <div id="funches" class="menu-section">
+        <h2>Call Dis number now to order</h2>
+        <p>(868) 3032259</p>
+    </div>
+
+    <div class="watermark">Kttz</div>
+
+    <footer>
+        <p>All rights reserved by Kttz</p>
+    </footer>
+
+    <script>
+        function showMenu(menuId) {
+            document.querySelectorAll('.menu-section').forEach(function(section) {
+                section.classList.remove('visible');
+            });
+            document.getElementById(menuId).classList.add('visible');
+        }
+    </script>
+
+</body>
+</html>
